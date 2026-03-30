@@ -1,0 +1,13 @@
+---
+import StandardLayout from "./StandardLayout.astro"
+const {frontmatter } = Astro.props;
+---
+
+<StandardLayout title={frontmatter.title}>
+  <h3>Blog</h3>
+  <h1> {frontmatter.title}</h1>
+  <p>{frontmatter.author}</p>
+  <p>{frontmatter.date}</p>
+<br/>
+<slot/>
+</StandardLayout>
