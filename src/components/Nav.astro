@@ -1,10 +1,13 @@
 ---
+const navItems = [
+  {href:"blog_home", label:"Read"},
+  {href:"/contribute", label:"Contribute"},
+  {href:"/join", label:"Join Us"},
+]
 ---
 
-<nav>
-    <ul>
-      <li><a href="/blog_home/">Read</a></li>
-      <li><a href="/contribute/">Contribute</a></li>
-      <li><a href="/join/">Join</a></li>
+<ul class="flex gap-4">
+
+  {navItems.map(item => (      <li><a href="item.href">{item.label}</a></li>
+  ))}
   </ul>
-</nav>

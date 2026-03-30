@@ -4,10 +4,24 @@ const {frontmatter } = Astro.props;
 ---
 
 <StandardLayout title={frontmatter.title}>
-  <h3>Blog</h3>
-  <h1> {frontmatter.title}</h1>
-  <p>{frontmatter.author}</p>
-  <p>{frontmatter.date}</p>
-<br/>
+
+  <article> 
+  <!-- <h3>Blog</h3>  -->
+  <!-- TODO: indicate where are in the navigation -->
+
+    <div class="mb-8"> 
+  <h1 class="text-4xl font-bold"> {frontmatter.title}</h1>
+
+      <div class="text-sm italic">
+
+  <p >{frontmatter.author}</p>
+  <p >{frontmatter.date}</p>
+      </div>
+</div>
+  <div class="prose prose-sm prose-neutral">
+
 <slot/>
+  </div> 
+
+</article>
 </StandardLayout>
