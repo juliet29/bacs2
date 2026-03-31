@@ -1,6 +1,6 @@
 
 ---
-import StandardLayout from "../layouts/StandardLayout.astro"
+import StandardLayout from "@layouts/StandardLayout.astro"
 const posts = Object.values(import.meta.glob('../pages/blog/*.md', { eager: true }));
 ---
 <StandardLayout title="Blog Home">  
